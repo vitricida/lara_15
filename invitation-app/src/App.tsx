@@ -1,4 +1,3 @@
-import React from "react";
 import Hero from "./components/Hero";
 import Countdown from "./components/Countdown";
 import EventDetails from "./components/EventDetails";

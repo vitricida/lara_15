@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import "./styles.css";
 import BackgroundImage from "/src/assets/hero-background.jpg";
