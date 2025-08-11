@@ -59,6 +59,14 @@
   margin-top: 10px;
 }
 
+.scroll-down-icon {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 6rem;
