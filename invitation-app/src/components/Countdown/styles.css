@@ -1,0 +1,5 @@
+.countdown-container {
+  /* Ya no necesita padding, el padre .section lo centra */
+  text-align: center;
+  width: 100%;
+}

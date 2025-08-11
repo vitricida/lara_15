@@ -1,0 +1,70 @@
+.hero-container {
+  height: 100%; /* Ocupa el 100% del padre (.section) */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Superposición oscura para legibilidad */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 12rem; /* Aumentamos el tamaño para la nueva fuente */
+  font-weight: 300;
+  color: #B76E79; /* Un tono Rose Gold */
+
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #f0f0f0; /* Plateado claro */
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+.hero-content h3 {
+  font-family: 'Great Vibes', cursive;
+  letter-spacing: 1.5px;
+  font-size: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 10rem;
+  font-weight: 400;
+  color: #f0f0f0; /* Plateado claro */
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 6rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+}
