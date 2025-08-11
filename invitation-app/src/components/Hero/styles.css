@@ -25,6 +25,8 @@
   position: relative;
   z-index: 2;
   color: #fff;
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+  padding: 0 20px; /* Añade un poco de espacio en los bordes para móviles */
 }
 
 .hero-content h1 {
@@ -64,15 +66,27 @@
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 3;
+  z-index: 3; /* z-index más alto para asegurar visibilidad */
 }
 
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 6rem;
+    font-size: 8rem; /* Ajustado para tablets */
   }
 
   .hero-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 5rem; /* Específico para celulares */
+    line-height: 1;
+  }
+
+  .hero-content h2 {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
   }
 }
