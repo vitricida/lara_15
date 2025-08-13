@@ -53,12 +53,25 @@
   font-family: 'Great Vibes', cursive;
   letter-spacing: 1.5px;
   font-size: 1.5rem;
-  padding-left: 2rem;
+  padding-left: 20px; /* Pequeño espacio para que no esté pegado al borde del texto */
   padding-right: 2rem;
   padding-top: 10rem;
   font-weight: 400;
   color: #f0f0f0; /* Plateado claro */
   margin-top: 10px;
+}
+
+.spotify-player-container {
+  position: absolute;
+  z-index: 10;
+  bottom: 50px
+}
+
+.spotify-player-container iframe {
+  border: none !important;
+  border-radius: 12px;
+  max-width: 300px;
+  max-height: 100px;
 }
 
 .scroll-down-icon {
@@ -88,5 +101,10 @@
   .hero-content h2 {
     font-size: 1.2rem;
     letter-spacing: 3px;
+  }
+
+  .spotify-player-container {
+    width: 80%;
+    bottom: 60px;
   }
 }

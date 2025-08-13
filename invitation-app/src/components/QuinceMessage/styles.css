@@ -1,28 +1,20 @@
-.dress-code-container {
+.quince-message-container {
   position: relative;
   width: 100%;
-  height: 100vh;
-  max-height: 100vh;
-  padding: 4rem 2rem;
+  height: 100%;
+  min-height: 100vh;
+  padding: 6rem 2rem;
   margin: 0;
-  background: #e8b4b8;  /* Rose background igual que QuinceMessage */
+  background: #e8b4b8;  /* Rose-gold sólido */
   overflow: hidden;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  z-index: 3;
+  justify-content: center;
 }
 
-.dress-code-container .section-title {
-  text-align: center;
-  width: 100%;
-  position: relative;
-  z-index: 10;
-}
 
-.dress-code-content {
+
+.quince-message-content {
   position: relative;
   z-index: 2;
   max-width: 800px;
@@ -30,7 +22,7 @@
   text-align: center;
 }
 
-.dress-code-text {
+.quince-message-text {
   font-size: 1.6rem;
   line-height: 1.8;
   color: #ffffff;
@@ -45,8 +37,8 @@
   letter-spacing: 0.5px;
 }
 
-.dress-icon,
-.crown-icon {
+.emoji-top,
+.emoji-bottom {
   font-size: 2.5rem;
   text-align: center;
   margin: 1.5rem 0;
@@ -54,61 +46,65 @@
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
 }
 
-.dress-icon {
+.emoji-top {
   margin-bottom: 3rem;
 }
 
-.crown-icon {
+.emoji-bottom {
   margin-top: 3rem;
 }
 
+
+
+
+
 /* Responsive design */
 @media (max-width: 768px) {
-  .dress-code-container {
-    padding: 3rem 1.5rem;
+  .quince-message-container {
+    padding: 4rem 1.5rem;
   }
   
-  .dress-code-text {
+  .quince-message-text {
     font-size: 1.4rem;
     line-height: 1.8;
   }
   
-  .dress-icon,
-  .crown-icon {
+  .emoji-top,
+  .emoji-bottom {
     font-size: 2.2rem;
     letter-spacing: 0.3rem;
   }
   
-  .dress-icon {
+  .emoji-top {
     margin-bottom: 2.5rem;
   }
   
-  .crown-icon {
+  .emoji-bottom {
     margin-top: 2.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .dress-code-container {
-    padding: 2rem 1rem;
+  .quince-message-container {
+    padding: 3rem 1rem;
   }
   
-  .dress-code-text {
+  .quince-message-text {
     font-size: 1.3rem;
     line-height: 1.7;
   }
   
-  .dress-icon,
-  .crown-icon {
+  .emoji-top,
+  .emoji-bottom {
     font-size: 2rem;
     letter-spacing: 0.2rem;
   }
   
-  .dress-icon {
+  .emoji-top {
     margin-bottom: 2rem;
   }
   
-  .crown-icon {
+  .emoji-bottom {
     margin-top: 2rem;
   }
 }

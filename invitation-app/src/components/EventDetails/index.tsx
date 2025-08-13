@@ -2,22 +2,88 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import "./styles.css";
 
+// SVG Icons
+const CalendarIcon = () => (
+  <svg
+    width="40"
+    height="40"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M8 2V6M16 2V6M3 10H21M5 4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4Z"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const ClockIcon = () => (
+  <svg
+    width="40"
+    height="40"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" />
+    <polyline
+      points="12,6 12,12 16,14"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const LocationIcon = () => (
+  <svg
+    width="40"
+    height="40"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M21 10C21 17 12 23 12 23S3 17 3 10C3 5.02944 7.02944 1 12 1C16.9706 1 21 5.02944 21 10Z"
+      stroke="currentColor"
+      strokeWidth="2"
+    />
+    <circle cx="12" cy="10" r="3" stroke="currentColor" strokeWidth="2" />
+  </svg>
+);
+
 const EventDetails = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   const titleVariants = {
     hidden: { opacity: 0, y: -50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+    visible: { opacity: 1, y: 0 },
   };
 
-  const contentVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.3 } },
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -50, scale: 0.9 },
+    visible: { opacity: 1, x: 0, scale: 1 },
   };
 
   return (
-    <div ref={ref} className="event-details-container">
+    <section ref={ref} className="event-details-container">
       <motion.h2
         className="section-title"
         variants={titleVariants}
@@ -26,21 +92,45 @@ const EventDetails = () => {
       >
         Detalles del Evento
       </motion.h2>
+
       <motion.div
-        variants={contentVariants}
+        className="event-details-content"
+        variants={containerVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
-        {/* Aquí irán la fecha, hora y lugar */}
-        <p style={{ fontSize: "1.5rem", marginTop: "20px" }}>
-          Fecha: Sábado 23 de Noviembre, 2024
-          <br />
-          Hora: 21:00 hs
-          <br />
-          Lugar: Salón "The Grand Palace"
-        </p>
+        <motion.div className="event-detail-item" variants={itemVariants}>
+          <div className="detail-icon">
+            <CalendarIcon />
+          </div>
+          <div className="detail-info">
+            <h3 className="detail-title">Fecha</h3>
+            <p className="detail-text">13 de Septiembre, 2025</p>
+          </div>
+        </motion.div>
+
+        <motion.div className="event-detail-item" variants={itemVariants}>
+          <div className="detail-icon">
+            <ClockIcon />
+          </div>
+          <div className="detail-info">
+            <h3 className="detail-title">Hora</h3>
+            <p className="detail-text">21:00 horas</p>
+          </div>
+        </motion.div>
+
+        <motion.div className="event-detail-item" variants={itemVariants}>
+          <div className="detail-icon">
+            <LocationIcon />
+          </div>
+          <div className="detail-info">
+            <h3 className="detail-title">Lugar</h3>
+            <p className="detail-text">Glorieta - Comando</p>
+            <p className="detail-address">Av. Bulevard Artigas 2555</p>
+          </div>
+        </motion.div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 

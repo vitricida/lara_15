@@ -1,0 +1,140 @@
+.photo-carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 60px 40px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  z-index: 2;
+}
+
+
+
+.photo-carousel-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.photo-carousel-container .section-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 4rem;
+  font-weight: 300;
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  letter-spacing: 3px;
+  text-align: center;
+  position: relative;
+  z-index: 4;
+}
+
+.gallery-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.8);
+  letter-spacing: 1px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+  position: relative;
+  z-index: 5;
+}
+
+.camera-icon-static {
+  font-size: 3rem;
+  margin-top: 30px;
+  filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.6));
+  user-select: none;
+  position: relative;
+  z-index: 5;
+}
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .photo-carousel-container {
+    padding: 40px 20px;
+    min-height: 80vh;
+  }
+
+  .photo-carousel-container .section-title {
+    font-size: 3rem;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+  }
+
+  .gallery-subtitle {
+    font-size: 1.1rem;
+    max-width: 500px;
+  }
+
+  .camera-icon-static {
+    font-size: 2.5rem;
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-carousel-container {
+    padding: 30px 15px;
+  }
+
+  .photo-carousel-container .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+  }
+
+  .gallery-subtitle {
+    font-size: 1rem;
+    max-width: 400px;
+    line-height: 1.5;
+  }
+
+  .camera-icon-static {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+}

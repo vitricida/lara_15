@@ -52,6 +52,24 @@ const Hero = () => {
           Mis 15 Años
         </motion.h2>
       </div>
+
+      <motion.div
+        className="spotify-player-container"
+        initial={{ opacity: 0, x: "100%" }}
+        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: "100%" }}
+        transition={{ duration: 1, delay: 1, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <iframe
+          src="https://open.spotify.com/embed/track/6nek1Nin9q48AVZcWs9e9D?utm_source=generator"
+          width="100%"
+          height="152"
+          allowFullScreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+          title="Spotify Player"
+        ></iframe>
+      </motion.div>
+
       <motion.div
         className="scroll-down-icon"
         variants={scrollDownVariants}
