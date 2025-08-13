@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect, useCallback } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
+import ScrollChevrons from "../ScrollChevrons";
 import "./styles.css";
 
 // Animated number component
@@ -87,6 +88,8 @@ const Countdown = () => {
 
   return (
     <div ref={ref} className="countdown-container">
+      <ScrollChevrons />
+
       {/* Iconos de relojes flotantes */}
       <div className="floating-clocks">
         <motion.div

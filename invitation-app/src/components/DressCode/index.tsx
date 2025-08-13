@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import ScrollChevrons from "../ScrollChevrons";
 import "./styles.css";
 
 const DressCode = () => {
@@ -41,6 +42,8 @@ const DressCode = () => {
 
   return (
     <section ref={ref} className="dress-code-container">
+      <ScrollChevrons />
+
       <motion.h2
         className="section-title"
         variants={titleVariants}

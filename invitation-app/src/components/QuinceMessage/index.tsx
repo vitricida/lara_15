@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import ScrollChevrons from "../ScrollChevrons";
 import "./styles.css";
 
 const QuinceMessage = () => {
@@ -37,6 +38,8 @@ const QuinceMessage = () => {
 
   return (
     <section ref={ref} className="quince-message-container">
+      <ScrollChevrons />
+
       <div className="quince-message-content">
         <motion.div
           className="emoji-top"

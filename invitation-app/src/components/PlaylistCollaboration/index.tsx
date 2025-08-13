@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import ScrollChevrons from "../ScrollChevrons";
 import "./styles.css";
 
 const PlaylistCollaboration = () => {
@@ -52,6 +53,8 @@ const PlaylistCollaboration = () => {
 
   return (
     <section ref={ref} className="playlist-container">
+      <ScrollChevrons />
+
       <motion.div
         className="playlist-content"
         variants={containerVariants}

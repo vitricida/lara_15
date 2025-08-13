@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
+import ScrollChevrons from "../ScrollChevrons";
 import "./styles.css";
 
 // Your beautiful quinceañera photos!
@@ -58,6 +59,8 @@ const PhotoCarousel = () => {
 
   return (
     <section ref={ref} className="photo-carousel-container">
+      <ScrollChevrons />
+
       {/* Background rotating images */}
       <AnimatePresence mode="wait">
         <motion.div

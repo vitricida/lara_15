@@ -5,6 +5,8 @@ import Countdown from "./components/Countdown";
 import EventDetails from "./components/EventDetails";
 import DressCode from "./components/DressCode";
 import PlaylistCollaboration from "./components/PlaylistCollaboration";
+import RSVPConfirmation from "./components/RSVPConfirmation";
+import GiftInfo from "./components/GiftInfo";
 
 import "./App.css";
 
@@ -31,6 +33,14 @@ function App() {
       </section>
       <section className="section">
         <PlaylistCollaboration />
+      </section>
+
+      <section className="section">
+        <RSVPConfirmation />
+      </section>
+
+      <section className="section">
+        <GiftInfo />
       </section>
     </div>
   );

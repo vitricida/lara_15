@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import ScrollChevrons from "../ScrollChevrons";
 import "./styles.css";
 
 // SVG Icons
@@ -84,6 +85,8 @@ const EventDetails = () => {
 
   return (
     <section ref={ref} className="event-details-container">
+      <ScrollChevrons />
+
       {/* Iconos animados flotantes */}
       <div className="floating-icons">
         <motion.div

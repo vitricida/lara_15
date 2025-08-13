@@ -1,0 +1,430 @@
+.gift-info-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 60px 40px;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #FFD700, #FFA500, #FF6B6B, #E8B4B8); /* Gold to rose gradient */
+  background-size: 400% 400%;
+  animation: giftGradientFlow 10s ease-in-out infinite;
+  box-sizing: border-box;
+}
+
+@keyframes giftGradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gift-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.gift-info-container .section-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.gift-message {
+  margin-bottom: 40px;
+}
+
+.main-message {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #ffffff;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+  opacity: 0.95;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.prex-info {
+  margin-bottom: 40px;
+}
+
+.prex-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.prex-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.prex-header h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.gift-svg {
+  width: 28px;
+  height: 28px;
+  color: #FFD700;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+}
+
+.account-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.number {
+  font-family: 'Inter', monospace;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.copy-button {
+  background: rgba(255, 215, 0, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+.copy-button:hover {
+  background: rgba(255, 215, 0, 1);
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6);
+}
+
+.prex-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.gratitude-message {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Iconos flotantes animados */
+.floating-gift-icons {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating-gift-icon {
+  position: absolute;
+  font-size: 2.5rem;
+  filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.6));
+  user-select: none;
+  opacity: 0.8;
+}
+
+.icon-1 { 
+  top: 8%; 
+  left: 10%; 
+  font-size: 2.8rem;
+}
+
+.icon-2 { 
+  top: 12%; 
+  right: 8%; 
+  font-size: 2.4rem;
+}
+
+.icon-3 { 
+  top: 45%; 
+  left: 5%; 
+  font-size: 3rem;
+}
+
+.icon-4 { 
+  top: 50%; 
+  right: 5%; 
+  font-size: 2.6rem;
+}
+
+.icon-5 { 
+  bottom: 20%; 
+  left: 12%; 
+  font-size: 2.7rem;
+}
+
+.icon-6 { 
+  bottom: 15%; 
+  right: 15%; 
+  font-size: 2.3rem;
+}
+
+/* Brillos flotantes */
+.sparkles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.sparkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #FFD700, transparent);
+  border-radius: 50%;
+}
+
+.sparkle-1 { 
+  top: 25%; 
+  left: 20%; 
+}
+
+.sparkle-2 { 
+  top: 30%; 
+  right: 25%; 
+}
+
+.sparkle-3 { 
+  bottom: 30%; 
+  left: 25%; 
+}
+
+.sparkle-4 { 
+  bottom: 25%; 
+  right: 20%; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gift-info-container {
+    padding: 40px 20px;
+  }
+
+  .gift-info-container .section-title {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    letter-spacing: 1.5px;
+  }
+
+  .main-message {
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+  }
+
+  .prex-card {
+    padding: 25px;
+    max-width: 350px;
+  }
+
+  .prex-header h3 {
+    font-size: 1.6rem;
+  }
+
+  .gift-svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .number {
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+  }
+
+  .copy-button {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .gratitude-message {
+    font-size: 1.1rem;
+  }
+
+  .floating-gift-icon {
+    font-size: 2rem;
+  }
+
+  .icon-1 {
+    font-size: 2.3rem;
+    top: 6%;
+    left: 8%;
+  }
+
+  .icon-3 {
+    font-size: 2.5rem;
+  }
+
+  .icon-5 {
+    font-size: 2.2rem;
+  }
+
+  .sparkle {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gift-info-container {
+    padding: 30px 15px;
+  }
+
+  .gift-info-container .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+
+  .main-message {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+
+  .prex-card {
+    padding: 20px;
+    max-width: 300px;
+  }
+
+  .prex-header {
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .prex-header h3 {
+    font-size: 1.4rem;
+  }
+
+  .gift-svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .account-number {
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .number {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .copy-button {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+
+  .prex-note {
+    font-size: 0.8rem;
+  }
+
+  .gratitude-message {
+    font-size: 1rem;
+  }
+
+  .floating-gift-icon {
+    font-size: 1.8rem;
+  }
+
+  .icon-1 {
+    font-size: 2rem;
+    top: 5%;
+    left: 5%;
+  }
+
+  .icon-2 {
+    top: 8%;
+    right: 5%;
+    font-size: 2rem;
+  }
+
+  .icon-3 {
+    top: 40%;
+    left: 3%;
+    font-size: 2.2rem;
+  }
+
+  .icon-4 {
+    top: 45%;
+    right: 3%;
+    font-size: 2.2rem;
+  }
+
+  .icon-5 {
+    bottom: 18%;
+    left: 8%;
+    font-size: 2rem;
+  }
+
+  .icon-6 {
+    bottom: 12%;
+    right: 10%;
+    font-size: 2rem;
+  }
+
+  .sparkle {
+    width: 5px;
+    height: 5px;
+  }
+}
