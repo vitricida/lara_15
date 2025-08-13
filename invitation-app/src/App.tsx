@@ -4,6 +4,7 @@ import PhotoCarousel from "./components/PhotoCarousel";
 import Countdown from "./components/Countdown";
 import EventDetails from "./components/EventDetails";
 import DressCode from "./components/DressCode";
+import PlaylistCollaboration from "./components/PlaylistCollaboration";
 
 import "./App.css";
 
@@ -27,6 +28,9 @@ function App() {
       </section>
       <section className="section">
         <DressCode />
+      </section>
+      <section className="section">
+        <PlaylistCollaboration />
       </section>
     </div>
   );

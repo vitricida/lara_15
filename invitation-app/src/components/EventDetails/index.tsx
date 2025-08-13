@@ -84,6 +84,106 @@ const EventDetails = () => {
 
   return (
     <section ref={ref} className="event-details-container">
+      {/* Iconos animados flotantes */}
+      <div className="floating-icons">
+        <motion.div
+          className="floating-icon icon-1"
+          animate={{
+            y: [0, -20, 0],
+            rotate: [0, 10, -10, 0],
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 0.5,
+          }}
+        >
+          👑
+        </motion.div>
+        <motion.div
+          className="floating-icon icon-2"
+          animate={{
+            y: [0, -15, 0],
+            rotate: [0, -15, 15, 0],
+            x: [0, 10, 0],
+          }}
+          transition={{
+            duration: 2.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1,
+          }}
+        >
+          🎉
+        </motion.div>
+        <motion.div
+          className="floating-icon icon-3"
+          animate={{
+            scale: [1, 1.2, 1],
+            rotate: [0, 5, -5, 0],
+            y: [0, -10, 0],
+          }}
+          transition={{
+            duration: 2.8,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1.5,
+          }}
+        >
+          🌟
+        </motion.div>
+        <motion.div
+          className="floating-icon icon-4"
+          animate={{
+            x: [0, 15, 0],
+            rotate: [0, 8, -8, 0],
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            duration: 3.2,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2,
+          }}
+        >
+          🎈
+        </motion.div>
+        <motion.div
+          className="floating-icon icon-5"
+          animate={{
+            y: [0, -25, 0],
+            rotate: [0, 12, -12, 0],
+            scale: [1, 1.15, 1],
+          }}
+          transition={{
+            duration: 2.2,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 0.8,
+          }}
+        >
+          ✨
+        </motion.div>
+        <motion.div
+          className="floating-icon icon-6"
+          animate={{
+            x: [0, -12, 0],
+            y: [0, -8, 0],
+            rotate: [0, -10, 10, 0],
+          }}
+          transition={{
+            duration: 2.7,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1.8,
+          }}
+        >
+          💖
+        </motion.div>
+      </div>
+
       <motion.h2
         className="section-title"
         variants={titleVariants}
@@ -100,9 +200,16 @@ const EventDetails = () => {
         animate={isInView ? "visible" : "hidden"}
       >
         <motion.div className="event-detail-item" variants={itemVariants}>
-          <div className="detail-icon">
+          <motion.div
+            className="detail-icon"
+            whileHover={{
+              scale: 1.1,
+              rotate: 360,
+              transition: { duration: 0.6 },
+            }}
+          >
             <CalendarIcon />
-          </div>
+          </motion.div>
           <div className="detail-info">
             <h3 className="detail-title">Fecha</h3>
             <p className="detail-text">13 de Septiembre, 2025</p>
@@ -110,9 +217,16 @@ const EventDetails = () => {
         </motion.div>
 
         <motion.div className="event-detail-item" variants={itemVariants}>
-          <div className="detail-icon">
+          <motion.div
+            className="detail-icon"
+            whileHover={{
+              scale: 1.1,
+              rotate: 360,
+              transition: { duration: 0.6 },
+            }}
+          >
             <ClockIcon />
-          </div>
+          </motion.div>
           <div className="detail-info">
             <h3 className="detail-title">Hora</h3>
             <p className="detail-text">21:00 horas</p>
@@ -120,9 +234,16 @@ const EventDetails = () => {
         </motion.div>
 
         <motion.div className="event-detail-item" variants={itemVariants}>
-          <div className="detail-icon">
+          <motion.div
+            className="detail-icon"
+            whileHover={{
+              scale: 1.1,
+              rotate: 360,
+              transition: { duration: 0.6 },
+            }}
+          >
             <LocationIcon />
-          </div>
+          </motion.div>
           <div className="detail-info">
             <h3 className="detail-title">Lugar</h3>
             <p className="detail-text">Glorieta - Comando</p>

@@ -108,7 +108,7 @@ const PhotoCarousel = () => {
           }
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          📸
+          💗 📸 💗
         </motion.div>
       </motion.div>
     </section>

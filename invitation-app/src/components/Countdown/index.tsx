@@ -87,6 +87,196 @@ const Countdown = () => {
 
   return (
     <div ref={ref} className="countdown-container">
+      {/* Iconos de relojes flotantes */}
+      <div className="floating-clocks">
+        <motion.div
+          className="floating-clock clock-1"
+          animate={{
+            y: [0, -60, 0],
+            x: [0, 25, 0],
+            rotate: [0, 360],
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 0.2,
+          }}
+        >
+          ⏰
+        </motion.div>
+        <motion.div
+          className="floating-clock clock-2"
+          animate={{
+            y: [0, -45, 0],
+            rotate: [0, -360],
+            x: [0, -30, 0],
+          }}
+          transition={{
+            duration: 3.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1,
+          }}
+        >
+          🕐
+        </motion.div>
+        <motion.div
+          className="floating-clock clock-3"
+          animate={{
+            scale: [1, 1.3, 1],
+            rotate: [0, 180, 360],
+            y: [0, -50, 0],
+            x: [0, 35, 0],
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2,
+          }}
+        >
+          ⏱️
+        </motion.div>
+        <motion.div
+          className="floating-clock clock-4"
+          animate={{
+            x: [0, -40, 0],
+            y: [0, -35, 0],
+            rotate: [0, 270],
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            duration: 3.8,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 0.8,
+          }}
+        >
+          🕒
+        </motion.div>
+        <motion.div
+          className="floating-clock clock-5"
+          animate={{
+            y: [0, -65, 0],
+            x: [0, 30, 0],
+            rotate: [0, -180, -360],
+            scale: [1, 1.25, 1],
+          }}
+          transition={{
+            duration: 4.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1.5,
+          }}
+        >
+          ⏲️
+        </motion.div>
+        <motion.div
+          className="floating-clock clock-6"
+          animate={{
+            x: [0, 18, 0],
+            y: [0, -15, 0],
+            rotate: [0, 90, 180, 270, 360],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 0.5,
+          }}
+        >
+          🕘
+        </motion.div>
+        <motion.div
+          className="floating-clock clock-7"
+          animate={{
+            scale: [1, 1.4, 1],
+            rotate: [0, -90, -180, -270, -360],
+            y: [0, -40, 0],
+          }}
+          transition={{
+            duration: 5.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2.5,
+          }}
+        >
+          ⌚
+        </motion.div>
+
+        {/* Calendarios flotantes */}
+        <motion.div
+          className="floating-clock calendar-1"
+          animate={{
+            y: [0, -40, 0],
+            x: [0, -25, 0],
+            rotate: [0, 15, -15, 0],
+            scale: [1, 1.15, 1],
+          }}
+          transition={{
+            duration: 4.2,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 0.7,
+          }}
+        >
+          📅
+        </motion.div>
+        <motion.div
+          className="floating-clock calendar-2"
+          animate={{
+            y: [0, -55, 0],
+            x: [0, 20, 0],
+            rotate: [0, -20, 20, 0],
+            scale: [1, 1.3, 1],
+          }}
+          transition={{
+            duration: 5.2,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1.8,
+          }}
+        >
+          🗓️
+        </motion.div>
+        <motion.div
+          className="floating-clock calendar-3"
+          animate={{
+            x: [0, 35, 0],
+            y: [0, -30, 0],
+            rotate: [0, 25, -25, 0],
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            duration: 3.9,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2.3,
+          }}
+        >
+          📆
+        </motion.div>
+        <motion.div
+          className="floating-clock calendar-4"
+          animate={{
+            y: [0, -45, 0],
+            x: [0, -15, 0],
+            rotate: [0, -30, 30, 0],
+            scale: [1, 1.25, 1],
+          }}
+          transition={{
+            duration: 4.8,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 0.3,
+          }}
+        >
+          🗒️
+        </motion.div>
+      </div>
+
       <motion.h2
         className="section-title"
         variants={titleVariants}
