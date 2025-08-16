@@ -110,7 +110,6 @@ const EventDetails = () => {
 
   return (
     <section ref={ref} className="event-details-container">
-      <ScrollChevrons showUp={true} showDown={true} />
       {/* Iconos animados flotantes */}
       <div className="floating-icons">
         <motion.div
@@ -292,6 +291,7 @@ const EventDetails = () => {
           </div>
         </motion.div>
       </motion.div>
+      <ScrollChevrons showUp={true} showDown={true} />
     </section>
   );
 };

@@ -88,7 +88,7 @@ const Countdown = () => {
   };
 
   return (
-    <div ref={ref} className="countdown-container">
+    <section ref={ref} className="countdown-container">
       <ScrollChevrons showUp={true} showDown={true} />
       <Sparkles count={40} color="#FFD700" size={10} zIndex={5} />
       {/* Iconos de relojes flotantes */}
@@ -188,7 +188,7 @@ const Countdown = () => {
           </motion.div>
         )}
       </motion.div>
-    </div>
+    </section>
   );
 };
 
