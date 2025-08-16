@@ -2,6 +2,7 @@
   position: relative;
   width: 100%;
   height: 100%;
+  min-height: 100vh;
   padding: 4rem 2rem;
   margin: 0;
   background: #e8b4b8;
@@ -183,24 +184,26 @@
 
 @media (max-width: 480px) {
   .event-details-container {
-    padding: 1.5rem 0.8rem;
+    padding: 1rem 0.5rem;
+    justify-content: flex-start;
+    padding-top: 2rem;
   }
   
   .event-details-container .section-title {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
     letter-spacing: 1px;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
   }
   
   .event-details-content {
-    max-width: 300px;
-    gap: 0.8rem;
+    max-width: 320px;
+    gap: 0.6rem;
   }
   
   .event-detail-item {
-    padding: 0.8rem;
-    gap: 0.8rem;
+    padding: 0.6rem;
+    gap: 0.6rem;
     flex-direction: row;
     text-align: left;
   }
