@@ -58,6 +58,31 @@ const LocationIcon = () => (
   </svg>
 );
 
+const MapIcon = () => (
+  <svg
+    width="40"
+    height="40"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M14.5 2L20.5 5L14.5 8L8.5 5L2.5 8V18L8.5 15L14.5 18L20.5 15V5L14.5 2Z"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M8.5 5V15M14.5 8V18"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
 const EventDetails = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
@@ -238,6 +263,32 @@ const EventDetails = () => {
             <h3 className="detail-title">Lugar</h3>
             <p className="detail-text">Glorieta - Comando</p>
             <p className="detail-address">Av. Bulevard Artigas 2555</p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="event-detail-item map-item"
+          variants={itemVariants}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+          onClick={() =>
+            window.open("https://maps.app.goo.gl/XGwSJAZLHwvFy2hG6", "_blank")
+          }
+        >
+          <motion.div
+            className="detail-icon"
+            whileHover={{
+              scale: 1.1,
+              rotate: 360,
+              transition: { duration: 0.6 },
+            }}
+          >
+            <MapIcon />
+          </motion.div>
+          <div className="detail-info">
+            <h3 className="detail-title">Ver en Mapa</h3>
+            <p className="detail-text">Abrir en Google Maps</p>
+            <p className="detail-address">Toca para ver la ubicación</p>
           </div>
         </motion.div>
       </motion.div>
