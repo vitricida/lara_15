@@ -2,7 +2,10 @@
 .scroll-chevron {
   position: absolute;
   left: 50%;
+  right: auto;
   transform: translateX(-50%);
+  margin-left: auto;
+  margin-right: auto;
   z-index: 99999;
   cursor: pointer;
   user-select: none;
@@ -11,6 +14,8 @@
   justify-content: center;
   color: #ffffff;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+  width: auto;
+  text-align: center;
 }
 
 .scroll-up {
@@ -97,30 +102,57 @@
     bottom: 25px;
   }
 }
-
-/* Específicamente para iPhone 11 Pro */
+/* Específicamente para iPhone 11 Pro y problemas de viewport */
 @media (max-width: 414px) and (max-height: 896px) {
+  .scroll-chevron {
+    position: fixed;
+    left: 50vw;
+    transform: translateX(-50%);
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
   .scroll-up {
-    top: 30px;
+    top: 50px;
   }
 
   .scroll-down {
-    bottom: 30px;
+    bottom: 50px;
   }
 }
 
 /* Para pantallas muy pequeñas en landscape */
 @media (max-height: 600px) and (orientation: landscape) {
+  .scroll-chevron {
+    position: fixed;
+    left: 50vw;
+    transform: translateX(-50%);
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
   .scroll-chevron svg {
     width: 20px;
     height: 12px;
   }
 
   .scroll-up {
-    top: 5px;
+    top: 10px;
   }
 
   .scroll-down {
-    bottom: 5px;
+    bottom: 10px;
+  }
+}
+
+/* Fallback para móviles con problemas de viewport */
+@media (max-width: 480px) and (max-height: 1000px) {
+  .scroll-chevron {
+    position: fixed;
+    z-index: 999999;
+    left: 50vw;
+    transform: translateX(-50%);
+    margin-left: 0;
+    margin-right: 0;
   }
 }
