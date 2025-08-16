@@ -95,21 +95,6 @@ const DressCode = () => {
             </motion.span>
           ))}
         </motion.p>
-
-        <motion.div
-          className="crown-icon"
-          initial={{ opacity: 0, scale: 0, rotate: 180 }}
-          animate={
-            isInView
-              ? {
-                  opacity: 1,
-                  scale: 1,
-                  rotate: 0,
-                  transition: { duration: 0.8, delay: 2.5 },
-                }
-              : { opacity: 0, scale: 0, rotate: 180 }
-          }
-        ></motion.div>
       </div>
       <Sparkles count={60} color="white" size={8} zIndex={100} />
       <FrameOverlay />
