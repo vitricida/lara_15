@@ -1,7 +1,7 @@
 {
-  "buildCommand": "cd invitation-app && npm run build",
-  "outputDirectory": "invitation-app/dist",
-  "installCommand": "cd invitation-app && npm install",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install",
   "framework": "vite",
   "rewrites": [
     {
