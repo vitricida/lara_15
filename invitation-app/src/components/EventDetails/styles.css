@@ -64,15 +64,15 @@
 
 .map-item {
   cursor: pointer;
-  background: linear-gradient(145deg, rgba(34, 139, 34, 0.15), rgba(34, 139, 34, 0.05));
-  border: 1px solid rgba(34, 139, 34, 0.3);
+  background: linear-gradient(145deg, rgba(218, 165, 32, 0.15), rgba(218, 165, 32, 0.05));
+  border: 1px solid rgba(218, 165, 32, 0.3);
 }
 
 .map-item:hover {
-  background: linear-gradient(145deg, rgba(34, 139, 34, 0.25), rgba(34, 139, 34, 0.1));
-  border: 1px solid rgba(34, 139, 34, 0.5);
+  background: linear-gradient(145deg, rgba(218, 165, 32, 0.25), rgba(218, 165, 32, 0.1));
+  border: 1px solid rgba(218, 165, 32, 0.5);
   box-shadow: 
-    0 12px 40px rgba(34, 139, 34, 0.2),
+    0 12px 40px rgba(218, 165, 32, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
@@ -185,8 +185,7 @@
 @media (max-width: 480px) {
   .event-details-container {
     padding: 1rem 0.5rem;
-    justify-content: flex-start;
-    padding-top: 2rem;
+    justify-content: center;
   }
   
   .event-details-container .section-title {
