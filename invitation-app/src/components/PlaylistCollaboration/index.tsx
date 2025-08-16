@@ -53,8 +53,7 @@ const PlaylistCollaboration = () => {
 
   return (
     <section ref={ref} className="playlist-container">
-      <ScrollChevrons />
-
+      <ScrollChevrons showUp={true} showDown={true} />
       <motion.div
         className="playlist-content"
         variants={containerVariants}
@@ -188,27 +187,27 @@ const PlaylistCollaboration = () => {
         >
           💡 Necesitas tener Spotify para colaborar en la playlist
         </motion.p>
-
-        {/* Ondas musicales de fondo */}
-        <div className="sound-waves">
-          {[...Array(5)].map((_, i) => (
-            <motion.div
-              key={i}
-              className={`wave wave-${i + 1}`}
-              animate={{
-                scaleY: [1, 2, 1, 1.5, 1],
-                opacity: [0.3, 0.7, 0.3, 0.5, 0.3],
-              }}
-              transition={{
-                duration: 2 + i * 0.3,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: i * 0.2,
-              }}
-            />
-          ))}
-        </div>
       </motion.div>
+
+      {/* Ondas musicales de fondo - movidas fuera del contenido */}
+      <div className="sound-waves">
+        {[...Array(5)].map((_, i) => (
+          <motion.div
+            key={i}
+            className={`wave wave-${i + 1}`}
+            animate={{
+              scaleY: [1, 2, 1, 1.5, 1],
+              opacity: [0.3, 0.7, 0.3, 0.5, 0.3],
+            }}
+            transition={{
+              duration: 2 + i * 0.3,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: i * 0.2,
+            }}
+          />
+        ))}
+      </div>
     </section>
   );
 };

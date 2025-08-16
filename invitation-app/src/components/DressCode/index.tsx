@@ -1,7 +1,9 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import ScrollChevrons from "../ScrollChevrons";
+import FrameOverlay from "../FrameOverlay";
 import "./styles.css";
+import Sparkles from "../Sparkles";
 
 const DressCode = () => {
   const ref = useRef(null);
@@ -42,8 +44,7 @@ const DressCode = () => {
 
   return (
     <section ref={ref} className="dress-code-container">
-      <ScrollChevrons />
-
+      <ScrollChevrons showUp={true} showDown={true} />
       <motion.h2
         className="section-title"
         variants={titleVariants}
@@ -67,9 +68,16 @@ const DressCode = () => {
                 }
               : { opacity: 0, scale: 0, rotate: -180 }
           }
+        ></motion.div>
+
+        <motion.h3
+          className="formal-emphasis"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.8, delay: 1 }}
         >
-          👗✨
-        </motion.div>
+          Se requiere vestimenta formal
+        </motion.h3>
 
         <motion.p
           className="dress-code-text"
@@ -101,10 +109,10 @@ const DressCode = () => {
                 }
               : { opacity: 0, scale: 0, rotate: 180 }
           }
-        >
-          👑💖
-        </motion.div>
+        ></motion.div>
       </div>
+      <Sparkles count={60} color="white" size={8} zIndex={100} />
+      <FrameOverlay />
     </section>
   );
 };

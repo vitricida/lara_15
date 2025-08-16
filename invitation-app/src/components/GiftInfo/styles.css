@@ -32,7 +32,7 @@
 }
 
 .gift-info-container .section-title {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 3.5rem;
   font-weight: 600;
   color: #ffffff;
@@ -47,7 +47,7 @@
 }
 
 .main-message {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 1.4rem;
   font-weight: 300;
   color: #ffffff;
@@ -83,7 +83,7 @@
 }
 
 .prex-header h3 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 1.8rem;
   font-weight: 600;
   color: #ffffff;
@@ -111,7 +111,7 @@
 }
 
 .number {
-  font-family: 'Inter', monospace;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 2rem;
   font-weight: 700;
   color: #ffffff;
@@ -141,7 +141,7 @@
 }
 
 .prex-note {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.8);
   margin: 0;
@@ -149,7 +149,7 @@
 }
 
 .gratitude-message {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 1.2rem;
   font-weight: 400;
   color: #ffffff;
@@ -214,45 +214,6 @@
   font-size: 2.3rem;
 }
 
-/* Brillos flotantes */
-.sparkles {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 2;
-}
-
-.sparkle {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  background: radial-gradient(circle, #FFD700, transparent);
-  border-radius: 50%;
-}
-
-.sparkle-1 { 
-  top: 25%; 
-  left: 20%; 
-}
-
-.sparkle-2 { 
-  top: 30%; 
-  right: 25%; 
-}
-
-.sparkle-3 { 
-  bottom: 30%; 
-  left: 25%; 
-}
-
-.sparkle-4 { 
-  bottom: 25%; 
-  right: 20%; 
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .gift-info-container {
@@ -315,11 +276,6 @@
 
   .icon-5 {
     font-size: 2.2rem;
-  }
-
-  .sparkle {
-    width: 6px;
-    height: 6px;
   }
 }
 
@@ -421,10 +377,5 @@
     bottom: 12%;
     right: 10%;
     font-size: 2rem;
-  }
-
-  .sparkle {
-    width: 5px;
-    height: 5px;
   }
 }

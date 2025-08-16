@@ -1,0 +1,70 @@
+.closing-message-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  padding: 4rem 2rem;
+  margin: 0;
+  background: #f0f0f0; /* Fondo claro */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+}
+
+.closing-message-container .section-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #c78090; /* Un color suave que combine */
+  margin-bottom: 30px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  letter-spacing: 2px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.closing-message-text {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #555; /* Un color de texto más oscuro */
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .closing-message-container {
+    padding: 3rem 1.5rem;
+  }
+
+  .closing-message-container .section-title {
+    font-size: 3rem;
+  }
+
+  .closing-message-text {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .closing-message-container {
+    padding: 2rem 1rem;
+  }
+
+  .closing-message-container .section-title {
+    font-size: 2.5rem;
+  }
+
+  .closing-message-text {
+    font-size: 1.4rem;
+  }
+}

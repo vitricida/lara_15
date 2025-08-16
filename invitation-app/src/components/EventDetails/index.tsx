@@ -85,8 +85,7 @@ const EventDetails = () => {
 
   return (
     <section ref={ref} className="event-details-container">
-      <ScrollChevrons />
-
+      <ScrollChevrons showUp={true} showDown={true} />
       {/* Iconos animados flotantes */}
       <div className="floating-icons">
         <motion.div
@@ -102,9 +101,7 @@ const EventDetails = () => {
             ease: "easeInOut",
             delay: 0.5,
           }}
-        >
-          👑
-        </motion.div>
+        ></motion.div>
         <motion.div
           className="floating-icon icon-2"
           animate={{
@@ -118,9 +115,7 @@ const EventDetails = () => {
             ease: "easeInOut",
             delay: 1,
           }}
-        >
-          🎉
-        </motion.div>
+        ></motion.div>
         <motion.div
           className="floating-icon icon-3"
           animate={{
@@ -134,9 +129,7 @@ const EventDetails = () => {
             ease: "easeInOut",
             delay: 1.5,
           }}
-        >
-          🌟
-        </motion.div>
+        ></motion.div>
         <motion.div
           className="floating-icon icon-4"
           animate={{
@@ -150,9 +143,7 @@ const EventDetails = () => {
             ease: "easeInOut",
             delay: 2,
           }}
-        >
-          🎈
-        </motion.div>
+        ></motion.div>
         <motion.div
           className="floating-icon icon-5"
           animate={{
@@ -166,9 +157,7 @@ const EventDetails = () => {
             ease: "easeInOut",
             delay: 0.8,
           }}
-        >
-          ✨
-        </motion.div>
+        ></motion.div>
         <motion.div
           className="floating-icon icon-6"
           animate={{
@@ -182,9 +171,7 @@ const EventDetails = () => {
             ease: "easeInOut",
             delay: 1.8,
           }}
-        >
-          💖
-        </motion.div>
+        ></motion.div>
       </div>
 
       <motion.h2

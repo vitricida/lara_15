@@ -41,92 +41,7 @@ const RSVPConfirmation = () => {
 
   return (
     <section ref={ref} className="rsvp-confirmation-container">
-      <ScrollChevrons />
-
-      {/* Iconos animados flotantes */}
-      <div className="floating-rsvp-icons">
-        <motion.div
-          className="floating-rsvp-icon icon-1"
-          animate={{
-            y: [0, -25, 0],
-            rotate: [0, 15, -15, 0],
-            scale: [1, 1.1, 1],
-          }}
-          transition={{
-            duration: 3.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 0.5,
-          }}
-        >
-          💌
-        </motion.div>
-        <motion.div
-          className="floating-rsvp-icon icon-2"
-          animate={{
-            y: [0, -30, 0],
-            x: [0, 20, 0],
-            rotate: [0, -20, 20, 0],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1,
-          }}
-        >
-          📱
-        </motion.div>
-        <motion.div
-          className="floating-rsvp-icon icon-3"
-          animate={{
-            scale: [1, 1.3, 1],
-            rotate: [0, 10, -10, 0],
-            y: [0, -20, 0],
-          }}
-          transition={{
-            duration: 3.2,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1.5,
-          }}
-        >
-          💬
-        </motion.div>
-        <motion.div
-          className="floating-rsvp-icon icon-4"
-          animate={{
-            x: [0, -25, 0],
-            rotate: [0, 25, -25, 0],
-            scale: [1, 1.15, 1],
-          }}
-          transition={{
-            duration: 3.8,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 0.8,
-          }}
-        >
-          ✉️
-        </motion.div>
-        <motion.div
-          className="floating-rsvp-icon icon-5"
-          animate={{
-            y: [0, -35, 0],
-            rotate: [0, -30, 30, 0],
-            scale: [1, 1.2, 1],
-          }}
-          transition={{
-            duration: 4.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2,
-          }}
-        >
-          💕
-        </motion.div>
-      </div>
-
+      <ScrollChevrons showUp={true} showDown={true} />
       <motion.div
         className="rsvp-content"
         variants={containerVariants}
@@ -153,7 +68,7 @@ const RSVPConfirmation = () => {
             onClick={handleWhatsAppClick}
             whileHover={{
               scale: 1.05,
-              boxShadow: "0 0 30px rgba(37, 211, 102, 0.8)",
+              boxShadow: "0 0 30px rgba(218, 165, 32, 0.8)",
             }}
             whileTap={{ scale: 0.95 }}
           >
@@ -175,47 +90,13 @@ const RSVPConfirmation = () => {
         </motion.div>
 
         <motion.p className="phone-number" variants={itemVariants}>
-          📞 +598 97 281 034
+          Teléfono: +598 97 281 034
         </motion.p>
 
         <motion.p className="rsvp-note" variants={itemVariants}>
-          💡 Al hacer clic, se abrirá WhatsApp con un mensaje pre-escrito
+          Al hacer clic, se abrirá WhatsApp con un mensaje pre-escrito
         </motion.p>
       </motion.div>
-
-      {/* Ondas de mensaje */}
-      <div className="message-waves">
-        <motion.div
-          className="wave wave-1"
-          animate={{ scaleX: [0.8, 1.5, 0.9, 1.2] }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 0.1,
-          }}
-        />
-        <motion.div
-          className="wave wave-2"
-          animate={{ scaleX: [1, 1.8, 0.7, 1.4] }}
-          transition={{
-            duration: 2.3,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 0.2,
-          }}
-        />
-        <motion.div
-          className="wave wave-3"
-          animate={{ scaleX: [0.9, 1.6, 0.8, 1.3] }}
-          transition={{
-            duration: 2.1,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 0.3,
-          }}
-        />
-      </div>
     </section>
   );
 };

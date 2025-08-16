@@ -16,7 +16,14 @@
 }
 
 .dress-code-container .section-title {
-  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 3.5rem; /* Tamaño de RSVP */
+  font-weight: 600; /* Peso de RSVP */
+  color: #ffffff; /* Color de RSVP */
+  margin-bottom: 30px; /* Margen de RSVP */
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8); /* Sombra de texto de RSVP */
+  letter-spacing: 2px; /* Espaciado de letras de RSVP */
+  text-align: center; /* Alineación de texto de RSVP */
   width: 100%;
   position: relative;
   z-index: 10;
@@ -28,13 +35,25 @@
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
+  padding: 0 4rem; /* Agregar padding lateral */
+}
+
+.formal-emphasis {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 2rem 0;
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.6);
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .dress-code-text {
   font-size: 1.6rem;
   line-height: 1.8;
   color: #ffffff;
-  font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 300;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   margin: 2rem 0;
@@ -68,9 +87,18 @@
     padding: 3rem 1.5rem;
   }
   
+  .dress-code-content {
+    padding: 0 3rem; /* Reducir padding en tablets */
+  }
+
   .dress-code-text {
     font-size: 1.4rem;
     line-height: 1.8;
+  }
+
+  .formal-emphasis {
+    font-size: 1.9rem;
+    margin: 1.5rem 0;
   }
   
   .dress-icon,
@@ -93,9 +121,18 @@
     padding: 2rem 1rem;
   }
   
+  .dress-code-content {
+    padding: 0 2rem; /* Padding menor en móviles */
+  }
+
   .dress-code-text {
     font-size: 1.3rem;
     line-height: 1.7;
+  }
+
+  .formal-emphasis {
+    font-size: 1.6rem;
+    margin: 1rem 0;
   }
   
   .dress-icon,

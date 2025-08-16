@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import ScrollChevrons from "../ScrollChevrons";
+import FrameOverlay from "../FrameOverlay";
 import "./styles.css";
 
 // Your beautiful quinceañera photos!
@@ -20,6 +21,10 @@ const images = [
   {
     src: "/gallery/photo4.jpeg",
     alt: "Números luminosos 15",
+  },
+  {
+    src: "/gallery/photo5.jpeg",
+    alt: "Momento especial",
   },
 ];
 
@@ -59,8 +64,7 @@ const PhotoCarousel = () => {
 
   return (
     <section ref={ref} className="photo-carousel-container">
-      <ScrollChevrons />
-
+      <ScrollChevrons showUp={true} showDown={true} />
       {/* Background rotating images */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -103,17 +107,8 @@ const PhotoCarousel = () => {
           Momentos especiales que llevaremos siempre en el corazón
         </motion.p>
         {/* Camera icon */}
-        <motion.div
-          className="camera-icon-static"
-          initial={{ opacity: 0, scale: 0 }}
-          animate={
-            isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }
-          }
-          transition={{ duration: 0.6, delay: 0.8 }}
-        >
-          💗 📸 💗
-        </motion.div>
       </motion.div>
+      <FrameOverlay />
     </section>
   );
 };

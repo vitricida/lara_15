@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(135deg, #25D366, #128C7E, #075E54); /* WhatsApp green gradient */
+  background: black;
   background-size: 400% 400%;
   animation: whatsappGradientFlow 12s ease-in-out infinite;
   box-sizing: border-box;
@@ -32,7 +32,7 @@
 }
 
 .rsvp-confirmation-container .section-title {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 3.5rem;
   font-weight: 600;
   color: #ffffff;
@@ -43,7 +43,7 @@
 }
 
 .rsvp-description {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 1.4rem;
   font-weight: 300;
   color: #ffffff;
@@ -67,26 +67,44 @@
   align-items: center;
   justify-content: center;
   gap: 18px;
-  background: #25D366; /* WhatsApp Green */
+  background: linear-gradient(45deg, #DAA520, #FFD700, #FFA500, #DAA520); /* Gradiente dorado */
+  background-size: 300% 300%; /* Para la animación */
   color: #ffffff;
   border: none;
   padding: 22px 50px;
   border-radius: 60px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 1.4rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
+  box-shadow: 0 12px 35px rgba(218, 165, 32, 0.5); /* Sombra dorada */
+  animation: goldShine 3s ease-in-out infinite; /* Animación de oro reluciente */
   margin: 0 auto 40px auto;
   overflow: hidden;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
+/* Animación de oro reluciente */
+@keyframes goldShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .whatsapp-button:hover {
-  background: #128C7E;
+  background: linear-gradient(45deg, #B8860B, #FFD700, #FFAA00, #B8860B); /* Gradiente más intenso en hover */
+  background-size: 300% 300%;
+  animation: goldShine 1.5s ease-in-out infinite; /* Animación más rápida en hover */
   transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(218, 165, 32, 0.8); /* Sombra más intensa */
 }
 
 .whatsapp-button:active {
@@ -111,7 +129,7 @@
 }
 
 .phone-number {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 1.2rem;
   font-weight: 500;
   color: #ffffff;
@@ -121,7 +139,7 @@
 }
 
 .rsvp-note {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 0.9rem;
   color: #ffffff;
   opacity: 0.8;
@@ -195,7 +213,7 @@
 .wave {
   width: 12px;
   height: 60px;
-  background: linear-gradient(to top, #25D366, #128C7E);
+  background: linear-gradient(to top, #DAA520, #B8860B); /* Gradiente dorado */
   border-radius: 6px 6px 0 0;
   transform-origin: bottom;
 }

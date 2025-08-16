@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import ScrollChevrons from "../ScrollChevrons";
+import FrameOverlay from "../FrameOverlay";
 import "./styles.css";
 
 const QuinceMessage = () => {
@@ -38,8 +39,7 @@ const QuinceMessage = () => {
 
   return (
     <section ref={ref} className="quince-message-container">
-      <ScrollChevrons />
-
+      <ScrollChevrons showUp={true} showDown={true} />
       <div className="quince-message-content">
         <motion.div
           className="emoji-top"
@@ -54,9 +54,7 @@ const QuinceMessage = () => {
                 }
               : { opacity: 0, scale: 0, rotate: -180 }
           }
-        >
-          💫
-        </motion.div>
+        ></motion.div>
 
         <motion.p
           className="quince-message-text"
@@ -88,10 +86,9 @@ const QuinceMessage = () => {
                 }
               : { opacity: 0, scale: 0, rotate: 180 }
           }
-        >
-          💫
-        </motion.div>
+        ></motion.div>
       </div>
+      <FrameOverlay />
     </section>
   );
 };

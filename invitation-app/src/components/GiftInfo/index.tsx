@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import ScrollChevrons from "../ScrollChevrons";
+import Sparkles from "../Sparkles";
 import "./styles.css";
 
 const GiftIcon = () => (
@@ -37,108 +38,7 @@ const GiftInfo = () => {
 
   return (
     <section ref={ref} className="gift-info-container">
-      <ScrollChevrons showDown={false} />
-
-      {/* Iconos animados flotantes */}
-      <div className="floating-gift-icons">
-        <motion.div
-          className="floating-gift-icon icon-1"
-          animate={{
-            y: [0, -20, 0],
-            rotate: [0, 12, -12, 0],
-            scale: [1, 1.1, 1],
-          }}
-          transition={{
-            duration: 3.8,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 0.3,
-          }}
-        >
-          🎁
-        </motion.div>
-        <motion.div
-          className="floating-gift-icon icon-2"
-          animate={{
-            y: [0, -25, 0],
-            x: [0, 15, 0],
-            rotate: [0, -18, 18, 0],
-          }}
-          transition={{
-            duration: 4.2,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1.2,
-          }}
-        >
-          💝
-        </motion.div>
-        <motion.div
-          className="floating-gift-icon icon-3"
-          animate={{
-            scale: [1, 1.25, 1],
-            rotate: [0, 8, -8, 0],
-            y: [0, -15, 0],
-          }}
-          transition={{
-            duration: 3.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2,
-          }}
-        >
-          💰
-        </motion.div>
-        <motion.div
-          className="floating-gift-icon icon-4"
-          animate={{
-            x: [0, -20, 0],
-            rotate: [0, 20, -20, 0],
-            scale: [1, 1.15, 1],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 0.8,
-          }}
-        >
-          💳
-        </motion.div>
-        <motion.div
-          className="floating-gift-icon icon-5"
-          animate={{
-            y: [0, -30, 0],
-            rotate: [0, -25, 25, 0],
-            scale: [1, 1.2, 1],
-          }}
-          transition={{
-            duration: 4.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1.8,
-          }}
-        >
-          💎
-        </motion.div>
-        <motion.div
-          className="floating-gift-icon icon-6"
-          animate={{
-            x: [0, 18, 0],
-            y: [0, -12, 0],
-            rotate: [0, 15, -15, 0],
-          }}
-          transition={{
-            duration: 3.6,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1.5,
-          }}
-        >
-          🎀
-        </motion.div>
-      </div>
-
+      <ScrollChevrons showUp={true} showDown={true} />
       <motion.div
         className="gift-content"
         variants={containerVariants}
@@ -177,78 +77,22 @@ const GiftInfo = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                📋
+                Copiar
               </motion.button>
             </div>
-            <p className="prex-note">Haz clic en 📋 para copiar el número</p>
+            <p className="prex-note">
+              Haz clic en "Copiar" para copiar el número
+            </p>
           </div>
         </motion.div>
 
         <motion.p className="gratitude-message" variants={itemVariants}>
-          💕 Lo más importante es que compartas conmigo esta noche tan especial
-          💕
+          Lo más importante es que compartas conmigo esta noche tan especial
         </motion.p>
       </motion.div>
 
       {/* Brillos flotantes */}
-      <div className="sparkles">
-        <motion.div
-          className="sparkle sparkle-1"
-          animate={{
-            scale: [0, 1, 0],
-            rotate: [0, 180, 360],
-            opacity: [0, 1, 0],
-          }}
-          transition={{
-            duration: 2.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 0.5,
-          }}
-        />
-        <motion.div
-          className="sparkle sparkle-2"
-          animate={{
-            scale: [0, 1, 0],
-            rotate: [0, -180, -360],
-            opacity: [0, 1, 0],
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1.2,
-          }}
-        />
-        <motion.div
-          className="sparkle sparkle-3"
-          animate={{
-            scale: [0, 1, 0],
-            rotate: [0, 180, 360],
-            opacity: [0, 1, 0],
-          }}
-          transition={{
-            duration: 2.8,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2,
-          }}
-        />
-        <motion.div
-          className="sparkle sparkle-4"
-          animate={{
-            scale: [0, 1, 0],
-            rotate: [0, -180, -360],
-            opacity: [0, 1, 0],
-          }}
-          transition={{
-            duration: 2.2,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 0.8,
-          }}
-        />
-      </div>
+      <Sparkles count={50} />
     </section>
   );
 };

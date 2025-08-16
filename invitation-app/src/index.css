@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 html, body, #root {
   height: 100%;
@@ -14,7 +14,7 @@ html, body, #root {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   background-color: #111; /* Un fondo oscuro para empezar */
   color: #fff; /* Texto blanco para contraste */
   overflow-x: hidden; /* Previene el scroll horizontal */
