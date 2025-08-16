@@ -16,13 +16,13 @@
 
 .countdown-container .section-title {
   font-family: 'Times New Roman', Times, serif;
-  font-size: 3.5rem; /* Tamaño de RSVP */
-  font-weight: 600; /* Peso de RSVP */
-  color: #ffffff; /* Color de RSVP */
-  margin-bottom: 30px; /* Margen de RSVP */
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8); /* Sombra de texto de RSVP */
-  letter-spacing: 2px; /* Espaciado de letras de RSVP */
-  text-align: center; /* Alineación de texto de RSVP */
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  letter-spacing: 2px;
+  text-align: center;
 }
 
 .countdown-wrapper {

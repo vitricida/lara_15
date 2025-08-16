@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import ScrollChevrons from "../ScrollChevrons";
-import FrameOverlay from "../FrameOverlay";
 import "./styles.css";
 
 // Your beautiful quinceañera photos!
@@ -108,7 +107,6 @@ const PhotoCarousel = () => {
         </motion.p>
         {/* Camera icon */}
       </motion.div>
-      <FrameOverlay />
     </section>
   );
 };
